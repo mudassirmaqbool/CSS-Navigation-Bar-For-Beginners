@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="" class="logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <div class="right-nav">
+                <ul class="menu">
+                    <li><a href="#"  class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+                <a href="#" class="menu-btn">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <nav class="mobo-nav">
+        <header class="mobo-nav-bar">
+            <a href="" class="logo">
+                <img src="img/icon.svg" alt="">
+            </a>
+            <span id="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7.95 11.95h32m-32 12h32m-32 12h32"/></svg>
+            </span>
+        </header>
+
+        <main class="mobo-nav-drawer" id="drawer">
+            
+            <div class="top-layer">
+                <a href="" class="logo">
+                    <img src="img/icon.svg" alt="">
+                </a>
+                <span id="cancel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><g fill="currentColor"><path d="M7.172 14.243a1 1 0 1 1-1.415-1.415l7.071-7.07a1 1 0 1 1 1.415 1.414l-7.071 7.07Z"/><path d="M5.757 7.172a1 1 0 0 1 1.415-1.415l7.07 7.071a1 1 0 1 1-1.414 1.415l-7.07-7.071Z"/></g></svg>
+                </span>
+            </div>
+
+            <ul class="mobo-menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </main>
+    </nav>
+
+
+
+
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+
+    
+   
+
+    <script>
+
+        document.getElementById("hamburger").addEventListener('click', showMenu)
+
+        function showMenu()
+        {
+            document.getElementById('drawer').classList.add('show-menu')
+            document.getElementById('hamburger').classList.add('hidden')
+        }
+
+        document.getElementById("cancel").addEventListener('click', closeMenu)
+
+        function closeMenu()
+        {
+            document.getElementById('drawer').classList.remove('show-menu')
+            document.getElementById('hamburger').classList.remove('hidden')
+        }
+
+
+    </script>
+</body>
+</html>
